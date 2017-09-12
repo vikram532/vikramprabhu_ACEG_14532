@@ -287,7 +287,7 @@ public class StudentGroup implements StudentArrayOperation {
 			{
 				for(int i=0;i<student.length;i++)
 				{
-					if(student[i].id==students[i].id)
+					if(students[i].id==student[i].id)
 						return student[i+1];
 				}
 			}
