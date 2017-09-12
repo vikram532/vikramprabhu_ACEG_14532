@@ -41,7 +41,9 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		try{
 			if(students==null)
-			{}
+			{
+				throw IllegalArgumentException();
+			}
 			else
 			{
 				for(int i=0;i<students.length;i++)
@@ -176,6 +178,15 @@ public class StudentGroup implements StudentArrayOperation {
 					temp=students[i].avgMark;
 					students[i].avgMark=students[j].avgMark;
 					students[j].avgMark=temp;
+					temp=students[i+1].id;
+					students[i].id=students[j].id;
+					students[j].id=temp;
+					temp=students[i+1].fullName;
+					students[i].fullName=students[j].fullName;
+					students[j].fullName=temp;
+					temp=students[i+1].birthDate;
+					students[i].birthDate=students[j].birthDate;
+					students[j].birthDate=temp;
 				}
 			}
 		}
@@ -258,6 +269,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
+		bubbleSort();
 		return students[1];
 		return null;
 	}
