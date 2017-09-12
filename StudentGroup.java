@@ -27,9 +27,9 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student[] getStudents()
 	{
 		// Add your implementation here
-		for(int i=0;i<students.length;i++)
+		for(int i=0;i<student.length;i++)
 		{
-			return students[i];
+			return student[i];
 		}
 		return null;
 	}
@@ -61,10 +61,10 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		for(int i=0;i<students.length;i++)
+		for(int i=0;i<student.length;i++)
 		{
 			if(i==index)
-				return students[i];
+				return student[i];
 		}
 		return null;
 	}
@@ -148,11 +148,11 @@ public class StudentGroup implements StudentArrayOperation {
 		{
 			for(j=0;j<i+1;j++)
 			{
-				if(students[i].avgMark<students[i+1].avgMark)
+				if(student[i].avgMark<student[i+1].avgMark)
 				{
-					temp=students[i].avgMark;
-					students[i].avgMark=students[j].avgMark;
-					students[j].avgMark=temp;
+					temp=student[i].avgMark;
+					student[i].avgMark=student[j].avgMark;
+					student[j].avgMark=temp;
 				}
 			}
 		}
