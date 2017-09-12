@@ -270,7 +270,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
 		bubbleSort();
-		return students[1];
+		return students;
 		return null;
 	}
 
