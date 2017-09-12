@@ -27,7 +27,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student[] getStudents()
 	{
 		// Add your implementation here
-		Student st[1000];
+		Student st[];
 		for(int i=0;i<students.length;i++)
 		{
 			st[i]=students[i];
@@ -66,7 +66,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(index<0 ||index>students.length)
 		{
-			new throw IllegalArgumentException();
+			 throw IllegalArgumentException();
 		}
 		else
 		for(int i=0;i<student.length;i++)
