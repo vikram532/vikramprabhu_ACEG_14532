@@ -27,7 +27,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student[] getStudents()
 	{
 		// Add your implementation here
-		Student st[1000];
+		Student st[];
 		for(int i=0;i<students.length;i++)
 		{
 			st[i]=students[i];
@@ -41,7 +41,9 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		try{
 			if(students==null)
-			{}
+			{
+				throw IllegalArgumentException();
+			}
 			else
 			{
 				for(int i=0;i<students.length;i++)
@@ -64,7 +66,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(index<0 ||index>students.length)
 		{
-			new throw IllegalArgumentException();
+			 throw IllegalArgumentException();
 		}
 		else
 		for(int i=0;i<student.length;i++)
@@ -81,7 +83,7 @@ public class StudentGroup implements StudentArrayOperation {
 		try{
 			if(student==null)
 				{
-					throw IllegalArgumentsException();
+					throw IllegalArgumentException();
 				}
 			else
 			{
@@ -115,6 +117,21 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		if(student==null)
+			throw IllegalArgumentException();
+		else
+		{
+			for(int i=0;i<student.length;i++)
+			{
+				if(i==index)
+				{
+					student[i].id=student[index].id;
+					student[i].fullName=student[index].fullName;
+					student[i].birthDate=student[index].birthDate;
+					student[i].avgMark=student[index].avgMark;
+				}
+			}
+		}
 	}
 
 	@Override
@@ -161,6 +178,15 @@ public class StudentGroup implements StudentArrayOperation {
 					temp=students[i].avgMark;
 					students[i].avgMark=students[j].avgMark;
 					students[j].avgMark=temp;
+					temp=students[i+1].id;
+					students[i].id=students[j].id;
+					students[j].id=temp;
+					temp=students[i+1].fullName;
+					students[i].fullName=students[j].fullName;
+					students[j].fullName=temp;
+					temp=students[i+1].birthDate;
+					students[i].birthDate=students[j].birthDate;
+					students[j].birthDate=temp;
 				}
 			}
 		}
@@ -172,7 +198,9 @@ public class StudentGroup implements StudentArrayOperation {
 		try
 		{
 			if(date==null)
-				{}
+				{
+				throw IllegalArgumentException();
+				}
 			else
 			{
 				if(students.birthDate==date)
@@ -191,7 +219,9 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
 		if(firstDate==null||lastDate==null)
-			{}
+			{
+			throw IllegalArgumentException();
+			}
 		else
 		{
 			
@@ -205,7 +235,9 @@ public class StudentGroup implements StudentArrayOperation {
 		try
 		{
 			if(date==null)
-				{}
+				{
+				throw IllegalArgumentException();
+				}
 			else
 			{
 				
@@ -220,7 +252,9 @@ public class StudentGroup implements StudentArrayOperation {
 		try
 		{
 			if(indexOfStudent==0)
-			{}
+			{
+				throw IllegalArgumentException();
+			}
 		}catch(Exception e){}
 		return 0;
 	}
@@ -235,7 +269,8 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
-		return students[1];
+		bubbleSort();
+		return students;
 		return null;
 	}
 
@@ -245,12 +280,14 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		try{
 			if(student==null)
-			{}
+			{
+				throw IllegalArgumentException();
+			}
 			else
 			{
 				for(int i=0;i<student.length;i++)
 				{
-					if(student[i].id==students[i].id)
+					if(students[i].id==student[i].id)
 						return student[i+1];
 				}
 			}
