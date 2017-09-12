@@ -91,10 +91,10 @@ public class StudentGroup implements StudentArrayOperation {
 				{
 					if(i==index)
 					{
-						student[i].id=student[index].id;
-						student[i].fullName=student[index].fullName;
-						student[i].birthDate=student[index].birthDate;
-						student[i].avgMark=student[index].avgMark;
+						students[i].id=student[index].id;
+						students[i].fullName=student[index].fullName;
+						students[i].birthDate=student[index].birthDate;
+						students[i].avgMark=student[index].avgMark;
 					}
 				}	
 			}
@@ -125,10 +125,10 @@ public class StudentGroup implements StudentArrayOperation {
 			{
 				if(i==index)
 				{
-					student[i].id=student[index].id;
-					student[i].fullName=student[index].fullName;
-					student[i].birthDate=student[index].birthDate;
-					student[i].avgMark=student[index].avgMark;
+					students[i].id=student[index].id;
+					students[i].fullName=student[index].fullName;
+					students[i].birthDate=student[index].birthDate;
+					students[i].avgMark=student[index].avgMark;
 				}
 			}
 		}
