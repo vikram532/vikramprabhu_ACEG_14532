@@ -40,7 +40,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		try{
 			if(students==null)
-			new throw IllegalArgumentException();
+			{}
 			else
 			{
 				for(int i=0;i<students.length;i++)
@@ -74,10 +74,10 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		try{
 			if(student==null)
-				new throw IllegalArgumentException();
+				{}
 			else
 			{
-				for(int i=0;i<students.length;i++)
+				for(int i=0;i<student.length;i++)
 				{
 					if(i==index)
 					{
@@ -98,7 +98,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		int index=1;
 		if(student==null)
-			new throw IllegalArgumentException();
+			{}
 	}
 
 	@Override
@@ -166,7 +166,7 @@ public class StudentGroup implements StudentArrayOperation {
 		try
 		{
 			if(date==null)
-				new throw IllegalArgumentException();
+				{}
 			else
 			{
 				if(students.birthDate==date)
@@ -185,7 +185,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
 		if(firstDate==null||lastDate==null)
-			throw new IlegalArgumentsException();
+			{}
 		else
 		{
 			
@@ -199,7 +199,7 @@ public class StudentGroup implements StudentArrayOperation {
 		try
 		{
 			if(date==null)
-				new throw IllegalArgumentException();
+				{}
 			else
 			{
 				
@@ -214,7 +214,7 @@ public class StudentGroup implements StudentArrayOperation {
 		try
 		{
 			if(indexOfStudent==0)
-			new throw IllegalArgumentException();
+			{}
 		}catch(Exception e){}
 		return 0;
 	}
@@ -239,7 +239,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		try{
 			if(student==null)
-			new throw IllegalArgumentException();
+			{}
 			else
 			{
 				for(ini i=0;i<student.length;i++)
