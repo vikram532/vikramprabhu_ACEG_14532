@@ -28,7 +28,7 @@ public class StudentGroup implements StudentArrayOperation {
 	{
 		// Add your implementation here
 		Student st[];
-		for(int i=0;i<student.length;i++)
+		for(int i=0;i<students.length;i++)
 		{
 			st[i]=students[i];
 		}
