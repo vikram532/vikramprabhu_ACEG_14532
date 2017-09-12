@@ -29,7 +29,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		for(int i=0;i<students.length;i++)
 		{
-			System.out.println(students[i].id+" "+students[i].fullName+" "+students[i].birthDate+" "students[i].avgMark);
+			return students[i];
 		}
 		return null;
 	}
@@ -64,7 +64,7 @@ public class StudentGroup implements StudentArrayOperation {
 		for(int i=0;i<students.length;i++)
 		{
 			if(i==index)
-				System.out.println(students[i].id+" "+students[i].fullName+" "+students[i].birthDate+" "students[i].avgMark);
+				return students[i];
 		}
 		return null;
 	}
@@ -96,9 +96,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
-		int index=1;
-		if(student==null)
-			{}
+		
 	}
 
 	@Override
@@ -170,7 +168,7 @@ public class StudentGroup implements StudentArrayOperation {
 			else
 			{
 				if(students.birthDate==date)
-					System.Out.println(students.id+" "+students.fullName+" "+students.birthDate+" "students.avgMark);
+					return students;
 					
 			}
 		}
@@ -229,7 +227,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
-		System.out.println(students[1].id+" "+students[1].fullName+" "+students[1].birthDate+" "students[1].avgMark);
+		return students[1];
 		return null;
 	}
 
@@ -242,9 +240,10 @@ public class StudentGroup implements StudentArrayOperation {
 			{}
 			else
 			{
-				for(ini i=0;i<student.length;i++)
+				for(int i=0;i<student.length;i++)
 				{
-					System.Out.println(Student[i].id+" "+Student[i].fullName+" "+student[i].birthDate+" "student[i].avgMark);
+					if(student[i].id==students[i].id)
+						return student[i+1];
 				}
 			}
 		}
