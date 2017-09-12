@@ -27,11 +27,12 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student[] getStudents()
 	{
 		// Add your implementation here
-		for(int i=0;i<student.length;i++)
+		Student [] st=new Student();
+		for(int i=0;i<students.length;i++)
 		{
-			return student[i];
+			st[i]=students[i];
 		}
-		return null;
+		return st;
 	}
 
 	@Override
@@ -144,15 +145,15 @@ public class StudentGroup implements StudentArrayOperation {
 	{
 		// Add your implementation here
 		int i=0,temp;
-		for(i=0;i<student.length;i++)
+		for(i=0;i<students.length;i++)
 		{
 			for(j=0;j<i+1;j++)
 			{
-				if(student[i].avgMark<student[i+1].avgMark)
+				if(students[i].avgMark<students[i+1].avgMark)
 				{
-					temp=student[i].avgMark;
-					student[i].avgMark=student[j].avgMark;
-					student[j].avgMark=temp;
+					temp=students[i].avgMark;
+					students[i].avgMark=students[j].avgMark;
+					students[j].avgMark=temp;
 				}
 			}
 		}
